@@ -18,6 +18,8 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 
 import { Link } from "react-router-dom";
+import SearchBar from "../search/SearchBar";
+
 
 const drawerWidth = 240;
 
@@ -38,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(0),
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
@@ -49,7 +51,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
   },
 }));
 
@@ -115,6 +117,8 @@ const Header = (props) => {
                 </Typography>
             </ListItem>
           </List>
+
+          <SearchBar />
 
         </Toolbar>
       </AppBar>
